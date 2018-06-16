@@ -1,0 +1,6 @@
+type Exam {
+  id: ID! @unique
+  title: String!
+  createdAt: DateTime!
+  dueDate: DateTime!
+}
