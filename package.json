@@ -1,0 +1,26 @@
+{
+  "name": "hello-apollo-react-next",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "start": "next"
+  },
+  "dependencies": {
+    "add": "^2.0.6",
+    "apollo-cache-inmemory": "^1.2.4",
+    "apollo-client": "^2.3.4",
+    "apollo-link": "^1.2.2",
+    "apollo-link-error": "^1.1.0",
+    "apollo-link-http": "^1.5.4",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
+    "next": "^6.0.3",
+    "node-fetch": "^2.1.2",
+    "react": "^16.4.1",
+    "react-apollo": "^2.1.5",
+    "react-dom": "^16.4.1",
+    "yarn": "^1.7.0"
+  }
+}
