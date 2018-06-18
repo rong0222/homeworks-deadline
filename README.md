@@ -1,3 +1,6 @@
+# frontpage-react-app port with next.js
+inspired by https://github.com/apollostack/frontpage-react-app
+
 # live demo
 [https://hello-apollo-react-next-ewapauuihh.now.sh](https://hello-apollo-react-next-ewapauuihh.now.sh)
 
