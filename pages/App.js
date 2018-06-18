@@ -26,7 +26,7 @@ class App extends Component {
     }),
     new HttpLink({
       fetch,
-      uri: 'https://1jzxrj179.lp.gql.zone/graphql',
+      uri: 'http://localhost:8080/graphql',
       credentials: 'same-origin'
     })
   ]),

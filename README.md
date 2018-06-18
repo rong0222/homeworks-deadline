@@ -12,3 +12,9 @@ yarn dev
 yarn global add now
 now --public
 ```
+
+# graphql
+- use https://1jzxrj179.lp.gql.zone/graphql
+or build from repo https://github.com/apollographql/frontpage-server.git
+- use http://localhost:8080/graphql
+
