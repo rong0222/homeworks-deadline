@@ -7,7 +7,7 @@ import { onError } from 'apollo-link-error';
 import { ApolloLink } from 'apollo-link';
 import fetch from 'node-fetch';
 
-import PostList from './PostList';
+import ExamList from './ExamList';
 
 class App extends Component {
   constructor(...args) {
@@ -26,7 +26,7 @@ class App extends Component {
     }),
     new HttpLink({
       fetch,
-      uri: 'http://localhost:8080/graphql',
+      uri: 'https://eu1.prisma.sh/ming-der-wang-e80def/homeworks-deadline/dev',
       credentials: 'same-origin'
     })
   ]),
@@ -37,7 +37,7 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={this.client}>
-        <PostList />
+        <ExamList />
       </ApolloProvider>
     );
   }
