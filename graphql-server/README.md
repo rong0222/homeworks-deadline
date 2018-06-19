@@ -1,6 +1,6 @@
 # deploy to prisma server (free)
 ```
-yarn global install prisma
+yarn global add prisma
 prisma deploy
 ```
 
