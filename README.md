@@ -1,3 +1,7 @@
+# homeworks-deadline app
+- a graphql server (with prisma in folder graphql-server)
+- a client app (with next.js, can deploy with now)
+
 # frontpage-react-app port with next.js
 inspired by https://github.com/apollostack/frontpage-react-app
 
