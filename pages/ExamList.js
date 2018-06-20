@@ -24,12 +24,17 @@ function examList({ data: { loading, exams } }) {
 // The `graphql` wrapper executes a GraphQL query and makes the results
 // available on the `data` prop of the wrapped component (examList here)
 export default graphql(gql`
-  {
-    exams
-    {
-      id
-      title
-      dueDate
+query {
+  exams(
+    where: {
+      AND: [
+        { dueDate_lte: "2018-07-20T10:15:30.000Z" }
+        { dueDate_gt: "2018-06-20" }
+      ]
     }
+  ) {
+    title
+    dueDate
   }
+}
 `)(examList);

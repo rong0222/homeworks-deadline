@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/mingderwang/.nvm/versions/node/v8.11.1/bin/node /Users/mingderwang/.yarn/bin/yarn.js add graphql/language/printer
+  /Users/mingderwang/.nvm/versions/node/v8.11.1/bin/node /Users/mingderwang/.yarn/bin/yarn.js dev
 
 PATH: 
   /Users/mingderwang/.nvm/versions/node/v8.11.1/bin:/Users/mingderwang/sonar-scanner-3.1.0.1141-macosx/bin:/Users/mingderwang/.yarn/bin:/Users/mingderwang/.config/yarn/global/node_modules/.bin:/Users/mingderwang/.cache/rebar3/bin:/Users/mingderwang/src/2018/erl/rebar/:/Users/mingderwang/google-cloud-sdk/bin:/Users/mingderwang/anaconda3/envs/tensorflow/bin:/Users/mingderwang/anaconda3/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Users/mingderwang/go/bin:/Users/mingderwang/.rvm/bin:/Users/mingderwang/golang/bin:/usr/local/opt/go/libexec/bin
@@ -24,11 +24,20 @@ npm manifest:
       "start": "next"
     },
     "dependencies": {
+      "apollo-cache-inmemory": "^1.2.4",
       "apollo-client": "^2.3.4",
+      "apollo-link": "^1.2.2",
+      "apollo-link-error": "^1.1.0",
+      "apollo-link-http": "^1.5.4",
+      "graphql": "^0.13.2",
+      "graphql-tag": "^2.9.2",
       "next": "^6.0.3",
+      "node-fetch": "^2.1.2",
       "react": "^16.4.1",
       "react-apollo": "^2.1.5",
-      "react-dom": "^16.4.1"
+      "react-dom": "^16.4.1",
+      "tls": "^0.0.1",
+      "yarn": "^1.7.0"
     }
   }
 
@@ -719,6 +728,14 @@ Lockfile:
       micromatch "^3.1.4"
       normalize-path "^2.1.1"
   
+  apollo-cache-inmemory@^1.2.4:
+    version "1.2.4"
+    resolved "https://registry.yarnpkg.com/apollo-cache-inmemory/-/apollo-cache-inmemory-1.2.4.tgz#452e731a6777756d744d493a3223cf04f8e50c9b"
+    dependencies:
+      apollo-cache "^1.1.11"
+      apollo-utilities "^1.0.15"
+      graphql-anywhere "^4.1.13"
+  
   apollo-cache@^1.1.11:
     version "1.1.11"
     resolved "https://registry.yarnpkg.com/apollo-cache/-/apollo-cache-1.1.11.tgz#998e31a4b278e2fbbbf36fef8fce39c08adc35ca"
@@ -744,6 +761,25 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/apollo-link-dedup/-/apollo-link-dedup-1.0.9.tgz#3c4e4af88ef027cbddfdb857c043fd0574051dad"
     dependencies:
       apollo-link "^1.2.2"
+  
+  apollo-link-error@^1.1.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/apollo-link-error/-/apollo-link-error-1.1.0.tgz#ef8a64411361314364db40c1d4023b987a84860f"
+    dependencies:
+      apollo-link "^1.2.2"
+  
+  apollo-link-http-common@^0.2.4:
+    version "0.2.4"
+    resolved "https://registry.yarnpkg.com/apollo-link-http-common/-/apollo-link-http-common-0.2.4.tgz#877603f7904dc8f70242cac61808b1f8d034b2c3"
+    dependencies:
+      apollo-link "^1.2.2"
+  
+  apollo-link-http@^1.5.4:
+    version "1.5.4"
+    resolved "https://registry.yarnpkg.com/apollo-link-http/-/apollo-link-http-1.5.4.tgz#b80b7b4b342c655b6a5614624b076a36be368f43"
+    dependencies:
+      apollo-link "^1.2.2"
+      apollo-link-http-common "^0.2.4"
   
   apollo-link@^1.0.0, apollo-link@^1.2.2:
     version "1.2.2"
@@ -1950,6 +1986,22 @@ Lockfile:
     version "4.1.11"
     resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
   
+  graphql-anywhere@^4.1.13:
+    version "4.1.13"
+    resolved "https://registry.yarnpkg.com/graphql-anywhere/-/graphql-anywhere-4.1.13.tgz#5314b879b0b7066e6835ad2f5716b4dae381dc63"
+    dependencies:
+      apollo-utilities "^1.0.15"
+  
+  graphql-tag@^2.9.2:
+    version "2.9.2"
+    resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.9.2.tgz#2f60a5a981375f430bf1e6e95992427dc18af686"
+  
+  graphql@^0.13.2:
+    version "0.13.2"
+    resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.13.2.tgz#4c740ae3c222823e7004096f832e7b93b2108270"
+    dependencies:
+      iterall "^1.2.1"
+  
   has-ansi@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/has-ansi/-/has-ansi-2.0.0.tgz#34f5049ce1ecdf2b0649af3ef24e45ed35416d91"
@@ -2334,6 +2386,10 @@ Lockfile:
     dependencies:
       node-fetch "^1.0.1"
       whatwg-fetch ">=0.10.0"
+  
+  iterall@^1.2.1:
+    version "1.2.2"
+    resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.2.2.tgz#92d70deb8028e0c39ff3164fdbf4d8b088130cd7"
   
   js-tokens@^3.0.0:
     version "3.0.2"
@@ -2746,6 +2802,10 @@ Lockfile:
     dependencies:
       encoding "^0.1.11"
       is-stream "^1.0.1"
+  
+  node-fetch@^2.1.2:
+    version "2.1.2"
+    resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.1.2.tgz#ab884e8e7e57e38a944753cec706f788d1768bb5"
   
   node-libs-browser@^2.0.0:
     version "2.1.0"
@@ -3818,6 +3878,10 @@ Lockfile:
     dependencies:
       setimmediate "^1.0.4"
   
+  tls@^0.0.1:
+    version "0.0.1"
+    resolved "https://registry.yarnpkg.com/tls/-/tls-0.0.1.tgz#0ab2bf5968d71df2f8c0e1515d24a2240b98aac8"
+  
   to-arraybuffer@^1.0.0:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/to-arraybuffer/-/to-arraybuffer-1.0.1.tgz#7d229b1fcc637e466ca081180836a7aabff83f43"
@@ -4209,6 +4273,10 @@ Lockfile:
       decamelize "^1.0.0"
       window-size "0.1.0"
   
+  yarn@^1.7.0:
+    version "1.7.0"
+    resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.7.0.tgz#0076b9fde6010e01950526a609bc53bc175ef925"
+  
   zen-observable-ts@^0.8.9:
     version "0.8.9"
     resolved "https://registry.yarnpkg.com/zen-observable-ts/-/zen-observable-ts-0.8.9.tgz#d3c97af08c0afdca37ebcadf7cc3ee96bda9bab1"
@@ -4220,14 +4288,17 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/zen-observable/-/zen-observable-0.8.8.tgz#1ea93995bf098754a58215a1e0a7309e5749ec42"
 
 Trace: 
-  Error: Received malformed response from registry for undefined. The registry may be down.
-      at new MessageError (/Users/mingderwang/.yarn/lib/cli.js:186:110)
-      at Function.<anonymous> (/Users/mingderwang/.yarn/lib/cli.js:51419:15)
-      at Generator.next (<anonymous>)
-      at step (/Users/mingderwang/.yarn/lib/cli.js:98:30)
-      at /Users/mingderwang/.yarn/lib/cli.js:116:14
-      at new Promise (<anonymous>)
-      at new F (/Users/mingderwang/.yarn/lib/cli.js:23451:28)
-      at Function.<anonymous> (/Users/mingderwang/.yarn/lib/cli.js:95:12)
-      at Function.findVersionInRegistryResponse (/Users/mingderwang/.yarn/lib/cli.js:51461:19)
-      at NpmResolver.<anonymous> (/Users/mingderwang/.yarn/lib/cli.js:51479:28)
+  Error: Command failed.
+  Exit code: 1
+  Command: sh
+  Arguments: -c next
+  Directory: /Users/mingderwang/tmp/homeworks-deadline
+  Output:
+  
+      at ProcessTermError.MessageError (/Users/mingderwang/.yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/Users/mingderwang/.yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/Users/mingderwang/.yarn/lib/cli.js:30281:17)
+      at emitTwo (events.js:126:13)
+      at ChildProcess.emit (events.js:214:7)
+      at maybeClose (internal/child_process.js:925:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
