@@ -7,13 +7,12 @@ import { onError } from 'apollo-link-error';
 import { ApolloLink } from 'apollo-link';
 import fetch from 'node-fetch';
 import moment from 'moment'
+import AddNewExam from './AddNewExam'
 
 const HOW_MANY_DAY = 6;
 const today = moment().format('YYYY-MM-DD');
 const calendarDueDate = moment().add(HOW_MANY_DAY, 'days').calendar();
 const dueDate = moment().add(HOW_MANY_DAY, 'days').format('YYYY-MM-DD');
-
-import ExamList from './ExamList';
 
 class App extends Component {
   constructor(...args) {
@@ -44,12 +43,10 @@ class App extends Component {
     return (
       <ApolloProvider client={this.client}>
         <div>
-          <h1>By {HOW_MANY_DAY} days later on {calendarDueDate}, ({dueDate})</h1>
-          <ExamList dueDate={dueDate} today={today} />
+          <AddNewExam />
         </div>
       </ApolloProvider>
     );
   }
 }
-
 export default App;
