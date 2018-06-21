@@ -42,7 +42,7 @@ class HomePage extends Component {
 
     render() {
 
-        const GET_CHANGE = gql`
+        const DO_ADD = gql`
         mutation NewExam($title: String!, $dueDate: DateTime!) {
             createExam(data: { title: $title, dueDate: $dueDate }) {
               id
@@ -54,7 +54,7 @@ class HomePage extends Component {
         `;
 
         return (
-            <Mutation mutation={GET_CHANGE}>
+            <Mutation mutation={DO_ADD}>
                 {createExam => (
                     <main>
                         <div>
