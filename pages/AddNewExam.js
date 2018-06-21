@@ -69,14 +69,14 @@ class HomePage extends Component {
                         <input
                             onChange={this.handleChange}
                             type='text'
-                            placeholder='Final Exam for Computer Class'
+                            placeholder='例如: 期末考'
                             value={this.state.field}
                         />
                         <p />
                         <input
                             onChange={this.handleDateChange}
                             type='text'
-                            placeholder='2018-6-28'
+                            placeholder='例如: 2018-6-28'
                             value={this.state.fieldDate}
                         />
                         <p />

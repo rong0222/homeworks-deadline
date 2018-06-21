@@ -31,6 +31,8 @@ npm manifest:
       "apollo-link-http": "^1.5.4",
       "graphql": "^0.13.2",
       "graphql-tag": "^2.9.2",
+      "isomorphic-unfetch": "^2.0.0",
+      "moment": "^2.22.2",
       "next": "^6.0.3",
       "node-fetch": "^2.1.2",
       "react": "^16.4.1",
@@ -2387,6 +2389,13 @@ Lockfile:
       node-fetch "^1.0.1"
       whatwg-fetch ">=0.10.0"
   
+  isomorphic-unfetch@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/isomorphic-unfetch/-/isomorphic-unfetch-2.0.0.tgz#f50140a4c163d7582b5f37f1591968c4f809a645"
+    dependencies:
+      node-fetch "^1.7.1"
+      unfetch "^3.0.0"
+  
   iterall@^1.2.1:
     version "1.2.2"
     resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.2.2.tgz#92d70deb8028e0c39ff3164fdbf4d8b088130cd7"
@@ -2682,7 +2691,7 @@ Lockfile:
     dependencies:
       minimist "0.0.8"
   
-  moment@^2.11.2:
+  moment@^2.11.2, moment@^2.22.2:
     version "2.22.2"
     resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
   
@@ -2796,7 +2805,7 @@ Lockfile:
       webpack-sources "1.1.0"
       write-file-webpack-plugin "4.2.0"
   
-  node-fetch@^1.0.1:
+  node-fetch@^1.0.1, node-fetch@^1.7.1:
     version "1.7.3"
     resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
     dependencies:
@@ -3979,7 +3988,7 @@ Lockfile:
       uglify-js "^2.8.29"
       webpack-sources "^1.0.1"
   
-  unfetch@3.0.0:
+  unfetch@3.0.0, unfetch@^3.0.0:
     version "3.0.0"
     resolved "https://registry.yarnpkg.com/unfetch/-/unfetch-3.0.0.tgz#8d1e0513a4ecd0e5ff2d41a6ba77771aae8b6482"
   
