@@ -22,7 +22,7 @@ class examList extends React.Component {
               {exams.concat().sort((a, b) => ((moment(a.dueDate) < moment(b.dueDate)) ? -1 : 1))
                 .map(exam =>
                   <li key={exam.id}>
-                    {'"' + exam.title + '"'} dued by {exam.dueDate} {' '}
+                    {'"' + exam.title + '"'} is due by {exam.dueDate} {' '}
                   </li>
                 )}
             </ul>
